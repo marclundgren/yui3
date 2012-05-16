@@ -551,6 +551,10 @@ Y.UploaderHTML5 = Y.extend( UploaderHTML5, Y.Widget, {
            
            this.fire("uploadstart"); 
        }
+       else {
+            this.queue.queuedFiles = this.queue.get('fileList');
+            this.queue._startNextFile();
+       }
     }
 },
 
